@@ -8,8 +8,6 @@
             font-weight: bold;            
         }
         .parameter {
-            display:flex;
-            flex-direction:row;
             font-family: 'FranklinGothic URW';
             font-style: normal;
             font-weight: 400;
@@ -36,12 +34,7 @@
         {{ caseInformation.name }}
     {% for key, value in caseInformation.data.items() %}
         <div class="parameter">
-            <div class="caption">
-                {{value.label|e}}
-            </div>
-            <div class="value">
-                {{value.value|e}}
-            </div>
+           <p><b> {{value.label|e}}</b> : {{value.value|e}}</p>
         </div>
     {% endfor %}
     </div>
