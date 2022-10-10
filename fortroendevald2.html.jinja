@@ -9,7 +9,7 @@
         <p><b>{{value.label|e}}:</b>
         {% if value.component == "Checkboxes" %}
             {% for check in value.value %}
-                {{check.text.value|e}}, 
+                {{check.text|e}}, 
             {% endfor %}
         {% else %}
             {{value.value|e}}
