@@ -32,11 +32,12 @@
 <body>
     <div id="header" >
         {{ caseInformation.name }}
+        </div>
     {% for key, value in caseInformation.data.items() %}
         <div>
            <p><b> {{value.label|e}}</b> : {{value.value|e}}</p>
         </div>
     {% endfor %}
-    </div>
+    
 </body>
 </html>
