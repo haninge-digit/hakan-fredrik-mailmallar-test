@@ -33,7 +33,7 @@
     <div id="header" >
         {{ caseInformation.name }}
     {% for key, value in caseInformation.data.items() %}
-        <div class="parameter">
+        <div>
            <p><b> {{value.label|e}}</b> : {{value.value|e}}</p>
         </div>
     {% endfor %}
