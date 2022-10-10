@@ -6,7 +6,15 @@
 <body>
     <h1>Anmälan om ny/ändrad förtroendevald</h1>
     {% for key, value in caseInformation.data.items() %}
-        <p><b>{{value.label|e}}:</b> {{value.value|e}}</p>
+        <p><b>{{value.label|e}}:</b>
+        {% if value.component == "Checkboxes" %}
+            {% for check in value.value %}
+                {{check.text.value|e}}, 
+            {% endfor %}
+        {% else %}
+            {{value.value|e}}
+        {% endif %}
+        </p>
     {% endfor %}
     
 </body>
