@@ -3,10 +3,7 @@
     <meta charset="utf-8">
     <title>{{ header }}</title>
     <style type="text/css">
-        #header {
-            font-size: 2em;
-            font-weight: bold;            
-        }
+       
         .parameter {
             font-family: 'FranklinGothic URW';
             font-style: normal;
@@ -31,7 +28,7 @@
 </head>
 <body>
     <div id="header" >
-        {{ caseInformation.name }}
+        <h1>{{ caseInformation.name }} av nyregisterad förtroendevald</h1>
         </div>
     {% for key, value in caseInformation.data.items() %}
         <div>
