@@ -32,17 +32,7 @@
 </head>
 <body>
     <div id="header" >
-        {{ header }}
+        {{ caseInformation.name }}
     </div>
-    {% for key, value in parameters.items() %}
-        <div class="parameter">
-            <div class="caption">
-                {{key|e}}
-            </div>
-            <div class="value">
-                {{value|e}}
-            </div>
-        </div>
-    {% endfor %}
 </body>
 </html>
